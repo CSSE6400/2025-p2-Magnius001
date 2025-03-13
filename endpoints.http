@@ -9,14 +9,31 @@ GET {{baseUrl}}/api/v1/todos
 ### Get a specific Todo
 GET {{baseUrl}}/api/v1/todos/1
 
+### Get a specific Todo
+GET {{baseUrl}}/api/v1/todos?window=5
+
 ### Create a Todo
 POST {{baseUrl}}/api/v1/todos
 Content-Type: application/json
 
 {
-    "title": "Test Todo",
-    "description": "This is a test todo",
-    "completed": false
+    "id": 1,
+    "title": "Hi",
+    "description": "Watch the CSSE6400 lecture on ECHO360 for week 1",
+    "completed": true,
+    "deadline_at": "2023-02-27T00:00:00"
+}
+
+### Create a Todo
+POST {{baseUrl}}/api/v1/todos
+Content-Type: application/json
+
+{
+    "id": 2,
+    "title": "Pass Practical Tests",
+    "description": "Pass the practical tests for CSSE6400",
+    "completed": false,
+    "deadline_at": "2023-03-01T00:00:00"
 }
 
 ### Update a Todo
@@ -24,8 +41,8 @@ PUT {{baseUrl}}/api/v1/todos/1
 Content-Type: application/json
 
 {
-    "title": "updated title"
+    "id": 1
 }
 
 ### Delete a Todo
-DELETE {{baseUrl}}/api/v1/todos/1
+DELETE {{baseUrl}}/api/v1/todos/8
